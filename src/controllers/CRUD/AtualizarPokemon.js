@@ -18,7 +18,7 @@ const AtualizandoPokemon = async (req, res) => {
     }, {where: {id: id}});
 
     const novoPokemon = await pokemon.findByPk(id);
-    return res.json({ message: 'Novo Pokémon: ', pokemon: novoPokemon});
+    return res.status(200).json({ message: 'Novo Pokémon: ', pokemon: novoPokemon});
 };
 
 module.exports = AtualizandoPokemon;

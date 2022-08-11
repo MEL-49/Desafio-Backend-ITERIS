@@ -3,11 +3,11 @@ const DeletarPokemon = async (req, res) => {
     let pokemon = require('../../models/Pokemon');
     const id = req.params.id;
 
-    const pokemons = await pokemon.findByPk(id);
+    const pokemonDeletado = await pokemon.findByPk(id);
 
     await pokemon.destroy({ where: { id: id }});
 
-    return res.json({ message: 'Pokemon deletado: ', pokemon: pokemons});
+    return res.status(200).json({ msg: 'Pokémon deletado:' , pokemon: pokemonDeletado});
 };
 
 module.exports = DeletarPokemon;
