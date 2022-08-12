@@ -1,4 +1,4 @@
-const EscolherPokemon = async (req, res) => {
+const Batalha = async (req, res) => {
 
     const pokemom = require('../../models/Pokemon');
 
@@ -12,4 +12,4 @@ const EscolherPokemon = async (req, res) => {
     return res.status(200).json({pokemon: acharPokemon, pokemon2: acharPokemon2});
 };
 
-module.exports = EscolherPokemon;
+module.exports = Batalha;

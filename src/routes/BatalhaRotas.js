@@ -1,7 +1,7 @@
 const express = require('express');
 const Router = express.Router();
-const EscolherPokemon = require('../controllers/BATALHA/EscolherPokemon');
+const Batalha = require('../controllers/BATALHA/Batalha');
 
-Router.post('/batalha/escolha', EscolherPokemon);
+Router.post('/batalha', Batalha);
 
 module.exports = Router;

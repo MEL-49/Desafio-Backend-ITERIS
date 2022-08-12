@@ -11,7 +11,7 @@ const AdicionarPokemon = async (req, res) => {
     const novoPokemon = await pokemon.create({
         name, type, hp, attack, defense, specialAttack, specialDefense, speed
     });
-    return res.json ({message: 'NOVO POKEMON ADICIONADO A POKEDEX: ', pokemon: novoPokemon});
+        return res.status(200).json ({message: 'NOVO POKEMON ADICIONADO A POKEDEX: ', pokemon: novoPokemon});
 };
 
 module.exports = AdicionarPokemon;
