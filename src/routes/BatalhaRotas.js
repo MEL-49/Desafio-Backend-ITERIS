@@ -1,7 +1,7 @@
 const express = require('express');
 const Router = express.Router();
-const Batalha = require('../controllers/BATALHA/Batalha');
+const BatalhaPartida = require('../controllers/BATALHA/BatalhaFinal');
 
-Router.post('/batalha', Batalha);
+Router.post('/batalha', BatalhaPartida);
 
 module.exports = Router;
