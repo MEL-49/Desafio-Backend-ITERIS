@@ -3,7 +3,7 @@
     const db = require('../../connection/db')
     const pokemon = require('../../models/Pokemon');
     const BatalhaPartida = require('../../models/Batalha');
-    const Pontos = require('../../models/Ponto');
+    const Pontos = require('../../models/Vitoria');
 
     const { playerOneCard, playerTwoCard }  = req.body;
 
