@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const db = require('../connection/db');
 
-const Partida = db.define('Vitorias', {
+const Partida = db.define('Pontos', {
     id_Partida: {
         type: Sequelize.DataTypes.INTEGER,
         allowNull: false,
@@ -9,12 +9,14 @@ const Partida = db.define('Vitorias', {
         primaryKey: true
     },
 
-    name: {
-        type: Sequelize.DataTypes.STRING
+    Vencedor: {
+        type: Sequelize.DataTypes.STRING,
+        allowNull: false
     },
 
-    Vitories: {
-        type: Sequelize.DataTypes.INTEGER
+    pontos: {
+        type: Sequelize.DataTypes.INTEGER,
+        allowNull: false
     }
   
 });
