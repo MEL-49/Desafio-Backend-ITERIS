@@ -1,29 +1,22 @@
 const Vitorias = async (req, res) => {
      
-    const Vitoria = require('../../models/Vitoria');
+    const Vitoria = require('../../models/Batalha');
 
     const countJogador1  = await Vitoria.count({
         where: {
-            Vencedor: 'PlayerOne'
+            player_vencedor: 'PlayerOne'
         }
     });
 
     const countJogador2  = await Vitoria.count({
         where: {
-            Vencedor: 'PlayerTwo'
-        }
-    });
-
-    const EMPATE  = await Vitoria.count({
-        where: {
-            Vencedor: 'EMPATE'
+            player_vencedor: 'PlayerTwo'
         }
     });
 
     return res.status(200).json({
         PlayerOne: countJogador1,
-        PlayerTwo: countJogador2,
-        EMPATE: EMPATE
+        PlayerTwo: countJogador2
     });
 };
 

@@ -1,7 +1,8 @@
 const Sequelize = require('sequelize');
 const db = require('../connection/db');
 
-const BatalhaPartidas = db.define('players', {
+const BatalhaPartidas = db.define('partidas', {
+
     id_Partida: {
         type: Sequelize.DataTypes.INTEGER,
         allowNull: false,
@@ -9,12 +10,17 @@ const BatalhaPartidas = db.define('players', {
         primaryKey: true
     },
 
-    winner: {
+    player_vencedor:{
+        type: Sequelize.DataTypes.STRING,
+        allowNull: false
+    },
+
+    Pokemon_winner: {
         type: Sequelize.DataTypes.INTEGER,
         allowNull: false,
     },
 
-    loser: {
+    Pokemon_loser: {
         type: Sequelize.DataTypes.INTEGER,
         allowNull: false
     },
@@ -34,12 +40,12 @@ const BatalhaPartidas = db.define('players', {
         allowNull: false
     },
 
-    specialAttack: {
+    special_Attack: {
         type: Sequelize.DataTypes.INTEGER,
         allowNull: false
     },
 
-    specialDefense: {
+    special_Defense: {
         type: Sequelize.DataTypes.INTEGER,
         allowNull: false
     },

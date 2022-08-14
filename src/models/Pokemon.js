@@ -3,7 +3,7 @@ const db = require('../connection/db');
 
 const Pokemon = db.define('pokemons', {
 
-    id: {
+    id_Pokemon: {
         type: Sequelize.DataTypes.INTEGER,
         allowNull: false,
         autoIncrement: true,
@@ -11,6 +11,12 @@ const Pokemon = db.define('pokemons', {
     },
 
     name: {
+        type: Sequelize.DataTypes.STRING,
+        allowNull: false,
+        unique: true
+    },
+
+    category: {
         type: Sequelize.DataTypes.STRING,
         allowNull: false
     },
@@ -35,12 +41,12 @@ const Pokemon = db.define('pokemons', {
         allowNull: false
     },
 
-    specialAttack: {
+    special_Attack: {
         type: Sequelize.DataTypes.INTEGER,
         allowNull: false
     },
 
-    specialDefense: {
+    special_Defense: {
         type: Sequelize.DataTypes.INTEGER,
         allowNull: false
     },

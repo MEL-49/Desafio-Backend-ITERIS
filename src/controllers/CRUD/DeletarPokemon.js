@@ -5,7 +5,7 @@ const DeletarPokemon = async (req, res) => {
 
     const pokemonDeletado = await pokemon.findByPk(id);
 
-    await pokemon.destroy({ where: { id: id }});
+    await pokemon.destroy({ where: { id_Pokemon: id }});
 
     return res.status(200).json({ msg: 'Pokémon deletado:' , pokemon: pokemonDeletado});
 };
