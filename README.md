@@ -213,10 +213,15 @@ Nesta rota é onde você irá escrever no body quais cartas o playerOne e o play
 #### Observações:
 - A partida será registrada em uma tabela chamada `partidas`;
 - O numero zero indica que houve empate entre os atributos (atributos com valores iguais entre os dois pokemons);
-- Caso os jogadores escolham o mesmo pokemon, a partida não será registrada no banco de dados e aparecerá outra resposta:
+- Caso os jogadores escolham o mesmo pokemon ou a partida de empate quando o numero de atributos fortes forem iguais, a batalha não será registrada no banco de dados e aparecerá outra resposta:
 ```
   RESULTADO DA BATALHA: EMPATE - Jogadores escolheram o mesmo pokémon
 ```
+
+```
+   RESULTADO DA BATALHA: EMPATE - Pokémons com o mesmo número de atributos fortes
+```
+
 ### 2. Total de vitórias de cada jogador: método GET
 
 Rota: http://localhost:9091/batalha/jogadores
