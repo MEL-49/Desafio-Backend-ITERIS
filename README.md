@@ -5,7 +5,7 @@
 Realizei o desafio utilizando a linguagem `Node.js` e o framework `Express`.
 
 # Descrição
-Este é um jogo de comparação de cartas de Pokémons, onde é possível fazer o  CRUD (criar, listar, atualizar e deletar)  de cartas de Pokemons para dois jogadores possam escolher duas cartas por meio do id (a chave primária ou identificador das cartas) para a aplicação fazer uma comparação de atributos, e a carta com a maior quantidade de atributos fortes será a vencedora.
+Este é um jogo de comparação de cartas de Pokémons, onde é possível fazer o  CRUD (criar, listar, atualizar e deletar)  de cartas de Pokemons para que dois jogadores possam escolher duas cartas por meio do id (a chave primária ou identificador das cartas) para a aplicação fazer uma comparação de atributos, e a carta com a maior quantidade de atributos fortes será a vencedora.
 
 
 ### Pré-requisitos:
